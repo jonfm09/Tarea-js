@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title> Ejercicio 7 </title>
+</head>
+<body>
+    <nav class="navbar bg-body-tertiary">
+        <div class="container">
+          <a class="navbar-brand" href="Index.html"> HOME
+          </a>
+        </div>
+      </nav>
+    
+          <br>
+          <h1 class="ms-2"> Ejercicio 7 </h1> 
+
+
+          <form id="form">
+            <div class="mb-3 ms-2 w-25">
+              <label for="exampleInputEmail1" class="form-label"> Examen 1 </label>
+              <input class="input-group-text" type="number" id="examen1"></input>  
+            </div>
+           
+            <div class="mb-3 ms-2">
+              <label for="exampleInputEmail1" class="form-label"> Examen 2 </label>
+              <input class="input-group-text" type="number" id="examen2"></input>  
+            </div>
+
+            <div class="mb-3 ms-2">
+              <label for="exampleInputEmail1" class="form-label"> Nota Final </label>
+              <p id="notafinal" ></p>  
+            </div> 
+
+            
+    
+            
+            <button type="button" class="btn btn-primary mt-3 ms-2" onclick="notaFinal()"> Calcula </button>
+          </form>
+          
+          
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>     
+</body>
+
+<script>
+
+
+
+let examen1 = document.getElementById("examen1")
+let examen2 = document.getElementById("examen2")
+let nota
+let palabra = document.getElementById("notafinal")
+
+
+function notaFinal(){
+  e1 = examen1.value * 0.30
+  e2 = examen2.value * 0.70
+  nota =  Number(e1) + Number(e2);
+
+  palabra.textContent = "Su nota final es "+ nota.valueOf(Number);
+
+
+}
+
+
+
+
+
+</script>
+</html>
